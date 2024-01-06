@@ -1,16 +1,22 @@
-{
-    "TOKEN": "",
-    "ID": "",
-    "HASH": "",
-    "Laravel_Session": "",
-    "XSRF_TOKEN": "",
-    "GDTot_Crypt": "",
-    "DCRYPT": "",
-    "KCRYPT": "",
-    "HCRYPT": "",
-    "KATCRYPT": "",
-    "UPTOBOX_TOKEN": "",
-    "TERA_COOKIE": "",
-    "CLOUDFLARE": "",
-    "PORT": 5000
-}
+# Required
+BOT_TOKEN = ""
+API_HASH = ""
+API_ID = ""
+AUTH_CHATS = "" # Separate multiple ids by space and : for topic_ids
+
+# Optional
+AUTO_BYPASS = ""
+OWNER_ID = "" # For personal use & Logs
+LARAVEL_SESSION = ""
+XSRF_TOKEN = ""
+GDTOT_CRYPT = ""
+HUBDRIVE_CRYPT = ""
+DRIVEFIRE_CRYPT = ""
+KATDRIVE_CRYPT = ""
+UPTOBOX_TOKEN = ""
+DIRECT_INDEX = ""
+TERA_COOKIE = ""
+
+# Update
+UPSTREAM_REPO = "https://github.com/msdohni/FZ-bypass"
+UPSTREAM_BRANCH = "main"

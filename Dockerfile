@@ -1,9 +1,16 @@
-FROM python:3.9
+FROM mysterysd/wzmlx:heroku
 
-WORKDIR /app
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
 
-COPY requirements.txt /app/
-RUN pip3 install -r requirements.txt
-COPY . /app
+COPY summa.txt .
+RUN pip3 install --no-cache-dir -r summa.txt
+RUN apt -qq update --fix-missing && \
+    apt -qq install -y mediainfo
+
+RUN apt-get -y clean
+RUN apt-get -y autoremove
+
+COPY . .
 
 CMD gunicorn app:app & python3 main.py
